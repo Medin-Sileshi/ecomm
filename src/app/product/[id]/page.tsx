@@ -4,8 +4,14 @@ import { notFound } from 'next/navigation';
 import AddToCartButton from '@/components/AddToCartButton';
 import Link from 'next/link';
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const product = products.find((p) => p.id === parseInt(params.id));
+interface PageProps {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function ProductPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const product = products.find((p) => p.id === parseInt(resolvedParams.id));
 
   if (!product) {
     notFound();
