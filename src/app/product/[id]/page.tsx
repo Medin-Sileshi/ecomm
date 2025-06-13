@@ -4,7 +4,13 @@ import { notFound } from 'next/navigation';
 import AddToCartButton from '@/components/AddToCartButton';
 import Link from 'next/link';
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
+export default function ProductPage({ params }: Props) {
   const product = products.find((p) => p.id === parseInt(params.id));
 
   if (!product) {
