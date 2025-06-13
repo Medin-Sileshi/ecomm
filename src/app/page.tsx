@@ -128,11 +128,11 @@ export default function Home() {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <h3 className="font-semibold text-gray-900 mb-2">Semira Kuri</h3>
-              <p className="text-gray-600">ID: ETUBE/776/12</p>
+              <p className="text-gray-600">ID: TIE/776/12</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <h3 className="font-semibold text-gray-900 mb-2">Yeshi Molla</h3>
-              <p className="text-gray-600">ID: ETUBE/735/12</p>
+              <p className="text-gray-600">ID: TIE/735/12</p>
             </div>
           </div>
         </div>
