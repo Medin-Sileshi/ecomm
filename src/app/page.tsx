@@ -15,62 +15,6 @@ export default function Home() {
             <p className="text-lg text-gray-600 mb-8">
               Your one-stop destination for premium tech products. Discover the latest gadgets and accessories at competitive prices.
             </p>
-            <Link
-              href="#products"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 inline-block"
-            >
-              Shop Now
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Course Info Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              Web Content Development and Website Management (ITEC5103) - Final Project
-            </h2>
-            <p className="text-gray-600 mb-8">
-              This e-commerce website is developed as a final project for the course <span className="font-semibold">Web Content Development and Website Management (ITEC5103)</span>,
-              demonstrating the implementation of modern web technologies and best practices in e-commerce development.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Group Members Section */}
-      <section className="py-12 bg-blue-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
-            Group Members
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">Medin Sileshi</h3>
-              <p className="text-gray-600">ID: ETUBE/1866/13</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">Winta Leulsegd</h3>
-              <p className="text-gray-600">ID: ETUBE/1745/13</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">Aleazare Alemayehu</h3>
-              <p className="text-gray-600">ID: ETUBE/1860/13</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">Natnael Zerihun</h3>
-              <p className="text-gray-600">ID: ETUBE/1861/13</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">Semira Kuri</h3>
-              <p className="text-gray-600">ID: ETUBE/776/12</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-2">Yeshi Molla</h3>
-              <p className="text-gray-600">ID: ETUBE/735/12</p>
-            </div>
           </div>
         </div>
       </section>
@@ -79,7 +23,7 @@ export default function Home() {
       <section id="products" className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
-            Featured Products
+            Products
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {products.map((product) => (
@@ -109,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -142,7 +86,62 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section> */}
+
+      {/* Course Info Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              Web Content Development and Website Management (ITEC5103) - Final Project
+            </h2>
+            <p className="text-gray-600 mb-8">
+              This e-commerce website is developed as a final project for the course <span className="font-semibold">Web Content Development and Website Management (ITEC5103)</span>,
+              demonstrating the implementation of modern web technologies and best practices in e-commerce development.
+            </p>
+          </div>
+        </div>
       </section>
+
+      {/* Group Members Section */}
+      <section id="group-members" className="py-12 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
+            Group Members
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Medin Sileshi</h3>
+              <p className="text-gray-600">ID: ETUBE/1866/13</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Winta Leulsegd</h3>
+              <p className="text-gray-600">ID: ETUBE/1745/13</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Aleazare Alemayehu</h3>
+              <p className="text-gray-600">ID: ETUBE/1860/13</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Natnael Zerihun</h3>
+              <p className="text-gray-600">ID: ETUBE/1861/13</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Semira Kuri</h3>
+              <p className="text-gray-600">ID: ETUBE/776/12</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-2">Yeshi Molla</h3>
+              <p className="text-gray-600">ID: ETUBE/735/12</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+        </div>
+      </section>
+      
     </main>
   );
 }

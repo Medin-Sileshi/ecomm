@@ -12,7 +12,6 @@ export default function CheckoutPage() {
     email: '',
     address: '',
     city: '',
-    zipCode: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -30,31 +29,31 @@ export default function CheckoutPage() {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">Checkout</h1>
+      <h1 className="text-4xl font-bold mb-8 text-gray-900">Checkout</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Order Summary</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-900">Order Summary</h2>
           <div className="space-y-4">
             {items.map((item) => (
-              <div key={item.id} className="flex justify-between">
+              <div key={item.id} className="flex justify-between text-gray-900">
                 <span>
                   {item.name} x {item.quantity}
                 </span>
-                <span>${(item.price * item.quantity).toFixed(2)}</span>
+                <span>ETB {(item.price * item.quantity).toLocaleString()}</span>
               </div>
             ))}
             <div className="border-t pt-4">
-              <div className="flex justify-between font-bold">
+              <div className="flex justify-between font-bold text-gray-900">
                 <span>Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>ETB {total.toLocaleString()}</span>
               </div>
             </div>
           </div>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <h2 className="text-2xl font-semibold mb-4">Shipping Information</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-900">Shipping Information</h2>
           <div>
-            <label htmlFor="name" className="block mb-1">
+            <label htmlFor="name" className="block mb-1 text-gray-900">
               Full Name
             </label>
             <input
@@ -64,11 +63,11 @@ export default function CheckoutPage() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border rounded"
+              className="w-full px-4 py-2 border rounded text-gray-900 bg-white"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block mb-1">
+            <label htmlFor="email" className="block mb-1 text-gray-900">
               Email
             </label>
             <input
@@ -78,11 +77,11 @@ export default function CheckoutPage() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border rounded"
+              className="w-full px-4 py-2 border rounded text-gray-900 bg-white"
             />
           </div>
           <div>
-            <label htmlFor="address" className="block mb-1">
+            <label htmlFor="address" className="block mb-1 text-gray-900">
               Address
             </label>
             <input
@@ -92,42 +91,26 @@ export default function CheckoutPage() {
               value={formData.address}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border rounded"
+              className="w-full px-4 py-2 border rounded text-gray-900 bg-white"
             />
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="city" className="block mb-1">
-                City
-              </label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border rounded"
-              />
-            </div>
-            <div>
-              <label htmlFor="zipCode" className="block mb-1">
-                ZIP Code
-              </label>
-              <input
-                type="text"
-                id="zipCode"
-                name="zipCode"
-                value={formData.zipCode}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border rounded"
-              />
-            </div>
+          <div>
+            <label htmlFor="city" className="block mb-1 text-gray-900">
+              City
+            </label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 border rounded text-gray-900 bg-white"
+            />
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
+            className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
             Place Order
           </button>
